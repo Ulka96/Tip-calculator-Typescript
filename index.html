@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cyan-100 flex items-center justify-center h-screen">
+
+  <div class="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
+    <h1 class="text-center text-4xl font-bold text-gray-600 mb-10 tracking-widest">S P L I <br> T T E R</h1>
+
+    <div class="flex flex-col md:flex-row justify-between">
+      <!-- Left Section -->
+      <div class="md:w-1/2 space-y-8 mr-4">
+        <div>
+          <label for="bill" class="block text-gray-600 text-sm font-bold mb-2">Bill</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">$</span>
+            <input id="billAmount" type="number" class="block w-full bg-gray-100 text-gray-700 border rounded-lg py-3 pl-10 pr-3 leading-tight focus:outline-none focus:bg-white" placeholder="0">
+          </div>
+        </div>
+
+        <div>
+          <p class="text-gray-600 text-sm font-bold mb-2">Select Tip %</p>
+          <div class="grid grid-cols-3 gap-4">
+            <button class="bg-teal-700 text-white font-bold py-2 rounded-lg hover:bg-teal-800 focus:bg-teal-800 select" value="5">5%</button>
+            <button class="bg-teal-700 text-white font-bold py-2 rounded-lg hover:bg-teal-800 focus:bg-teal-800 select" value="10">10%</button>
+            <button class="bg-teal-700 text-white font-bold py-2 rounded-lg hover:bg-teal-800 focus:bg-teal-800 select" value="15">15%</button>
+            <button class="bg-teal-700 text-white font-bold py-2 rounded-lg hover:bg-teal-800 focus:bg-teal-800 select" value="25">25%</button>
+            <button class="bg-teal-700 text-white font-bold py-2 rounded-lg hover:bg-teal-800 focus:bg-teal-800 select" value="50">50%</button>
+            <input id="tipPercentage" type="number" class="bg-gray-100 text-gray-700 border rounded-lg py-2 text-center leading-tight focus:outline-none focus:bg-white" placeholder="Custom">
+          </div>
+        </div>
+
+        <div>
+          <label for="people" class="block text-gray-600 text-sm font-bold mb-2">Number of People</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 11a5 5 0 100-10 5 5 0 000 10zm-7 8a7 7 0 0114 0H3z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <input id="peopleAmount" type="number" class="block w-full bg-gray-100 text-gray-700 border rounded-lg py-3 pl-10 pr-3 leading-tight focus:outline-none focus:bg-white" placeholder="0">
+          </div>
+        </div>
+        <button id="enter">Enter</button>
+      </div>
+
+      <!-- Right Section -->
+      <div class="md:w-1/2 mt-10 md:mt-0 bg-teal-800 p-8 rounded-lg text-white space-y-8">
+        <div class="flex justify-between">
+          <div>
+            <p class="text-sm">Tip Amount</p>
+            <p class="text-xs text-gray-300">/ person</p>
+          </div>
+          <p id="tipAmount" class="text-3xl">$0.00</p>
+        </div>
+
+        <div class="flex justify-between">
+          <div>
+            <p class="text-sm">Total</p>
+            <p class="text-xs text-gray-300">/ person</p>
+          </div>
+          <p id="totalAmount" class="text-3xl">$0.00</p>
+        </div>
+
+        <button id="resetButton" class="w-full bg-teal-900 text-white font-bold py-2 rounded-lg hover:bg-teal-700">RESET</button>
+      </div>
+    </div>
+  </div>
+<script src="./script.js"></script>
+</body>
+</html>
